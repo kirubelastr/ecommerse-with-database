@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style rel="stylesheet" href="/css/style.css" >  </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/adv.js"></script>
+  
+</head>
+
+<body>
+   
+    <nav class="navbar bg">
+        <ul class="links-container">
+            <li class="link-item">
+              <a href="#" class="link active">home</a>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">food</a>
+              <div class="food"><a href="#" ><button class="link2">traditional</button></a></div>
+              <div class="food"><a href="#" ><button class="link2">modern</button></a></div>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">beverages</a>
+              <div class="beverage"><a href="#"><button class="link2">softdrink</button></a></div>
+              <div class="beverage"><a href="#"><button>alchol</button></a></div>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">clothing</a>
+              <div class="clothing"><a href="#"><button class="link2">men</button></a></div>
+              <div class="clothing"><a href="#" ><button class="link2">women</button></a></div>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">sanitation</a>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">electronics</a>
+              <div class="electronics"><a href="#" ><button class="link2">home</button></a></div>
+              <div class="electronics"><a href="#" ><button class="link2">office</button></a></div>
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">sanitation</a>
+            </li>
+          </ul>
+        <div class="user-interactions">
+                <div class="logo-icon">
+                    <img src="img/cart.png"  alt="">
+                </div>
+                <div class="searchs">
+                    <button><input type="search"name="search">search</button>
+                </div>
+                <div class="cart">
+                    <img src="img/cart.png" class="cart-icon" alt="">
+                    <span class="cart-item-count">00</span>
+                </div>
+                <div class="user">
+                    <img src="img/user.png" class="user-icon" alt="">
+                </div>
+        </div>
+    </nav>
+ <div >
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/img_nature_wide.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/img_lights_wide.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/img_snow_wide.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides();
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+</script>
+ </div>
+    
+    <section class="search-listing">
+        <div class="product-container">
+            <div class="catagori_text">
+                <h2>bestseller</h2>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-1.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-2.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-3.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="catagori_text">
+                <h2>bestseller</h2>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-4.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-5.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-6.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="catagori_text">
+                <h2>bestseller</h2>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-7.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-8.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+            <div class="product-card">
+                <img src="img/sofa-9.png" class="product-img" alt="">
+                <p class="product-price">$ 499</p>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer_a">
+        <div class="obj">
+        <p>this is a footer</p>
+        </div>
+    </footer>
+</body>
+</html>

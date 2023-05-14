@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+ 
+/* Add styles to the form */
+.registration-form {
+ /* Center the form on the page */
+ margin: 0 auto;
+ width: 300px;
+ /* Change the background color */
+ background-color: lightblue;
+ /* Add some padding */
+ padding: 20px;
+}
+
+/* Style the form groups */
+.form-group {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 15px;
+}
+
+/* Style the labels */
+.form-group label {
+ font-size: 18px;
+ margin-bottom: 5px;
+}
+
+/* Style the inputs */
+.form-group input,
+.form-group select {
+ font-size: 18px;
+ padding: 5px;
+}
+
+/* Style the dropdown menu */
+.form-group select {
+ /* Change the background color */
+ background-color: white;
+ /* Add some border radius */
+ border-radius: 5px;
+ /* Add a transition for the hover effect */
+ transition: all 0.3s ease-in-out;
+}
+
+/* Add a hover effect to the dropdown menu */
+.form-group select:hover {
+ /* Change the background color */
+ background-color: lightgray;
+ /* Add a box shadow */
+ box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Style the submit button */
+.registration-form button {
+ font-size: 18px;
+}
+
+
+ </style>
+ <title>Document</title>
+</head>
+<body>
+ 
+<!-- Registration form -->
+<form class="registration-form">
+ <h2>Register</h2>
+ <!-- Name input -->
+ <div class="form-group">
+ <label for="name">Name:</label>
+ <input type="text" id="name" name="name" required>
+ </div>
+ <!-- Email input -->
+ <div class="form-group">
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" required>
+ </div>
+ <!-- Password input -->
+ <div class="form-group">
+ <label for="password">Password:</label>
+ <input type="password" id="password" name="password" required>
+ </div>
+ <!-- Birth date input -->
+ <div class="form-group">
+ <label for="birthdate">birthdate</label>
+ <input type="date" id="birthdate" name="birthdate" required>
+ </div>
+ <!-- Address input -->
+ <div class="form-group">
+ <label for="address">Address:</label>
+ <input type="text" id="address" name="address" placeholder="Street address" required><br>
+ <input type="text" id="city" name="city" placeholder="City" required><br>
+ <input type="text" id="state" name="state" placeholder="State/Province/Region" required><br>
+<!-- Zip code input -->
+<div class="form-group">
+  <label for="zip">Zip/Postal Code:</label>
+  <input type="text" id="zip" name="zip" required>
+</div>
+<!-- Country input -->
+<div class="form-group">
+  <label for="country">Country:</label>
+  <select id="country" name="country" required>
+      <option value="">--Please choose an option--</option>
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="mexico">Mexico</option>
+  </select>
+</div>
+<!-- Submit button -->
+<button type="submit">Submit</button>
+</form>
+<div class="form-group">
+  <a href="your_home_page_url">Return to Home Page</a>
+</div>
+</body>
+</html>
