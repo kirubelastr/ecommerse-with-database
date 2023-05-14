@@ -68,13 +68,25 @@
 <body>
  
 <!-- Registration form -->
-<form class="registration-form">
+<form  action="register.php"  method="POST" class="registration-form">
  <h2>Register</h2>
- <!-- Name input -->
+ <!-- Name  1st input -->
  <div class="form-group">
- <label for="name">Name:</label>
- <input type="text" id="name" name="name" required>
+ <label for="name">first name:</label>
+ <input type="text" id="name" name="firstname" required>
  </div>
+  <!-- Name  2nd input -->
+  <div class="form-group">
+    <label for="name">middle Name:</label>
+    <input type="text" id="name" name="middlename" required>
+    </div>
+
+     <!-- Name 3rd input -->
+ <div class="form-group">
+  <label for="name">last Name:</label>
+  <input type="text" id="name" name="lastname" required>
+  </div>
+ 
  <!-- Email input -->
  <div class="form-group">
  <label for="email">Email:</label>
@@ -85,11 +97,25 @@
  <label for="password">Password:</label>
  <input type="password" id="password" name="password" required>
  </div>
+  <!-- confirm Password input -->
+  <div class="form-group">
+    <label for="password">confirm Password:</label>
+    <input type="password" id="password" name="" required>
+    </div>
  <!-- Birth date input -->
  <div class="form-group">
  <label for="birthdate">birthdate</label>
  <input type="date" id="birthdate" name="birthdate" required>
  </div>
+ <!-- Country input -->
+<div class="form-group">
+  <div class="sex">
+  Sex   :  Male<input type="radio" name="gender" value="male"
+        <?php if (isset($gender) && $gender=="male") echo "checked";?>
+        Female<input type="radio" name="gender" value="female"
+        <?php if (isset($gender) && $gender=="female") echo "checked";?>
+      </div>
+</div>
  <!-- Address input -->
  <div class="form-group">
  <label for="address">Address:</label>
@@ -101,16 +127,7 @@
   <label for="zip">Zip/Postal Code:</label>
   <input type="text" id="zip" name="zip" required>
 </div>
-<!-- Country input -->
-<div class="form-group">
-  <label for="country">Country:</label>
-  <select id="country" name="country" required>
-      <option value="">--Please choose an option--</option>
-      <option value="usa">USA</option>
-      <option value="canada">Canada</option>
-      <option value="mexico">Mexico</option>
-  </select>
-</div>
+
 <!-- Submit button -->
 <button type="submit">Submit</button>
 </form>
